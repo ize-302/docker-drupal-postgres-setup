@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  drupal:
+    image: drupal:9
+    container_name: drupal
+    ports:
+      - ${PORT}:80
+    volumes:
+      - modules:/var/www/html/modules
+      - sites:/var/www/html/sites
+      - themes:/var/www/html/themes
+      - profiles:/var/www/html/profiles
+  pgdb:
+    image: postgres:14
+    container_name: pgdb
+    environment:
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=${PG_USER}
+volumes:
+  modules:
+  sites:
+  themes:
+  profiles:
