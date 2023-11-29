@@ -29,7 +29,7 @@ Note: In database config section. Under advanced, change Host value from `localh
 
 #### final
 
-Run the following commands to exit process and gracefully shutdown and remove running services
+Run the following commands to exit process and gracefully shutdown and remove volumes
 
 ```bash
 ctrl + c
